@@ -9,17 +9,17 @@
         }
         
         table, th, td {
-            /* width: 100%; */
             border: 1px solid black;
             border-collapse: collapse;
             padding: 16px;
         }
 
         table {
-            width: 100%;
+            width: 97%;
             border-radius: 10px;
             margin-left: 20px;
             margin-right: 20px;
+            margin: 0 auto;
         }
 
         h1, h5 {
@@ -115,9 +115,6 @@
             })
 
             document.getElementById("product_table").innerHTML = htmlString
-        }
-
-        refreshProducts()
 
         function addProduct() {
             fetch("{% url 'main:add_product_ajax' %}", {
@@ -130,6 +127,9 @@
         }
 
         document.getElementById("button_add").onclick = addProduct
+        }
+
+        refreshProducts()
 
     </script>
 
